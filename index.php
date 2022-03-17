@@ -1,2 +1,3 @@
 <?php
-    header('Location: ./resources/views/inicio.php');
+
+header ("Location: ./src/views/inicio.php");

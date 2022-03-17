@@ -8,9 +8,6 @@ const app ={
     palabraClave : "",
 
     cargarPost : async function(){
-        /*const contenido = document.querySelector("#content");
-        contenido.style.width = "100%";
-        contenido.classList.add(["mx-auto"], ["mt-5"]);*/
 
         const contenido = $("#content");
         contenido.css("width","100%");
@@ -32,7 +29,7 @@ const app ={
             .then( response => response.json())
             .then( posts => {
                 for(let post of posts){
-                    let autor = ( typeof r[post.userId-1].name !== 'undefined' ) ? r[post.userId-1].name : r.name;
+                    let autor = (typeof r[post.userId-1] !== "undefined") ? r[post.userId-1].name : r.name;
                     if(post.body.indexOf(this.palabraClave) !== -1){
                    
                     html += `
