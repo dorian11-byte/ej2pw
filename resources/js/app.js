@@ -22,7 +22,6 @@ const app ={
         let r = await fetch(this.urlUsers+"/"+this.userId)
             .then (resp => resp.json())
             .catch (err => console.error(error));
-            //console.log(r);
 
 
         fetch(this.urlPosts+urlaux)
